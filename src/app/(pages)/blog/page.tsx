@@ -1,5 +1,3 @@
-import Footer from "@/app/Layout/Footer";
-import Image from "next/image";
 import BlogCard from "./components/BlogCard";
 import { Button } from "@/components/ui/button";
 
