@@ -14,8 +14,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
         {/* Text Overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-white text-5xl font-extrabold p-4 bg-black bg-opacity-60 rounded-lg shadow-lg">
-            Live Fit
+          <h1 className="text-white text-5xl font-League Spartan text-center p-4 bg-black bg-opacity-60 rounded-lg shadow-lg">
+          <h2>Transform Your Body</h2>
+          <h3>Elevate Your Mind</h3>
           </h1>
         </div>
       </section>

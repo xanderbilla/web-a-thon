@@ -1,5 +1,4 @@
 import { Arrow } from "@/Icons/Arrow";
-import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -14,9 +13,9 @@ export default function BlogCard({}: Props) {
         </span>
       </div>
       <div className="flex items-center justify-center gap-2">
-        <span className="my-4 font-medium">Read More</span>
+        <span className="my-4">Read More</span>
         <Arrow className="my-2" />
       </div>
-    </Link>
+    </div>
   );
 }
