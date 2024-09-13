@@ -9,6 +9,8 @@ export default function Home() {
           src="/fit.gif"
           alt="Animated GIF"
           className="w-full h-full object-cover" 
+          height={480}
+          width={720}
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
