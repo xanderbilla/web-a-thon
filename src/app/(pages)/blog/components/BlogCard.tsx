@@ -1,5 +1,4 @@
 import { Arrow } from "@/Icons/Arrow";
-import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -17,6 +16,6 @@ export default function BlogCard({}: Props) {
         <span className="my-4 font-medium">Read More</span>
         <Arrow className="my-2" />
       </div>
-    </Link>
+    </div>
   );
 }

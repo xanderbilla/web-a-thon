@@ -1,14 +1,14 @@
 import Footer from "@/app/Layout/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="flex flex-col my-6 items-center justify-center min-h-screen bg-gray-100 rounded-xl">
       <section className="w-full h-screen relative overflow-hidden rounded-xl">
-        {/* GIF Section */}
-        <img
+        <Image
           src="/fit.gif"
           alt="Animated GIF"
-          className="w-full h-full object-cover" // Full width and height for GIF
+          className="w-full h-full object-cover" 
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-40 rounded-xl"></div>
