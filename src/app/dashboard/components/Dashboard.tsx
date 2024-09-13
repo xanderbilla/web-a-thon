@@ -25,12 +25,26 @@ export default function Dashboard() {
         <h1 className="text-3xl font-semibold mb-4">Fit Meals</h1>
         <div className="grid grid-cols-2 gap-6">
           {/* Meal Card 1 */}
-          <div className="w-full h-48 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out bg-white border-2 border-gray-300 flex items-center justify-center">
-            <p className="text-lg font-medium">Healthy Salad</p>
+          <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            <img
+              src="/path-to-healthy-salad.jpg"
+              alt="Healthy Salad"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <p className="text-lg font-extrabold text-white">Healthy Salad</p>
+            </div>
           </div>
           {/* Meal Card 2 */}
-          <div className="w-full h-48 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out bg-white border-2 border-gray-300 flex items-center justify-center">
-            <p className="text-lg font-medium">Protein Bowl</p>
+          <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            <img
+              src="/path-to-protein-bowl.jpg"
+              alt="Protein Bowl"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <p className="text-lg font-extrabold text-white">Protein Bowl</p>
+            </div>
           </div>
         </div>
       </section>
@@ -40,12 +54,26 @@ export default function Dashboard() {
         <h1 className="text-3xl font-semibold mb-4">Fit Workouts</h1>
         <div className="grid grid-cols-2 gap-6">
           {/* Workout Card 1 */}
-          <div className="w-full h-48 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out bg-white border-2 border-gray-300 flex items-center justify-center">
-            <p className="text-lg font-medium">Morning Yoga</p>
+          <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            <img
+              src="/path-to-morning-yoga.jpg"
+              alt="Morning Yoga"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <p className="text-lg font-extrabold text-white">Morning Yoga</p>
+            </div>
           </div>
           {/* Workout Card 2 */}
-          <div className="w-full h-48 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out bg-white border-2 border-gray-300 flex items-center justify-center">
-            <p className="text-lg font-medium">Strength Training</p>
+          <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out">
+            <img
+              src="/path-to-strength-training.jpg"
+              alt="Strength Training"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <p className="text-lg font-extrabold text-white">Strength Training</p>
+            </div>
           </div>
         </div>
       </section>
@@ -53,7 +81,7 @@ export default function Dashboard() {
       {/* Workout Schedule */}
       <section className="w-full">
         <h1 className="text-3xl font-semibold mb-4">Workout Schedule</h1>
-        <div className="w-full h-48 rounded-xl shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out bg-white border-2 border-gray-300 flex items-center justify-center">
+        <div className="relative w-full h-48 rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 duration-300 ease-in-out bg-gray-100 border-2 border-gray-300 flex items-center justify-center">
           <p className="text-lg font-medium">Monday - Full Body Workout</p>
         </div>
       </section>
