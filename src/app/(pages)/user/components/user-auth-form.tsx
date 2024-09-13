@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LoadingSpinner } from "../../../../Icons/LoadingSpinner";
-import { GitHubIcon } from "@/Icons/GitHubIcon";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -59,7 +58,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             {isLoading && (
               <LoadingSpinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            Sign In with Email
+            Sign Up
           </Button>
           <Button disabled={isLoading} variant="outline">
             {isLoading && (
