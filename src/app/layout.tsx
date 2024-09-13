@@ -10,8 +10,8 @@ const inter = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "AWS Amplify Gen 2",
-  description: "Next Gen AWS Amplify",
+  title: "Live.Fit",
+  description: "Live Fit is a fitness app that helps you stay fit and healthy.",
 };
 
 export default function RootLayout({
