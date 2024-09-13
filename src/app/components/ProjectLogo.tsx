@@ -20,10 +20,10 @@ export default function ProjectLogo({ onlyProjectLogo }: Props) {
         </>
       )}
       <Image
-        src="/amplify.png"
+        src="/logo.png"
         alt="AWS Amplify Logo"
-        width={200}
-        height={200}
+        width={300}
+        height={230}
       />
     </div>
   );
