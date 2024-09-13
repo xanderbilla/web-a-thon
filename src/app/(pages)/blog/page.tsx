@@ -12,7 +12,7 @@ export default function Home() {
       <Button className="m-4">Create a Blog</Button>
       </div>
 
-      <div className="p-4 grid grid-rows-6 gap-2">
+      <div className="p-4 grid grid-rows-6 gap-8">
         <BlogCard />
         <BlogCard />
         <BlogCard />

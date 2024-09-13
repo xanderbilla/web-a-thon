@@ -6,17 +6,22 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <div className="w-full h-20 flex flex-col md:flex-row items-center justify-end gap-4">
-      {/* <ProjectLogo /> */}
-      <div className="flex flex-col items-center justify-center gap-2">
-        <h3 className="text-lg md:text-2xl">Web-A-Thon</h3>
-        <p className="text-sm md:text-xs text-center">
-          &copy; 2024, Sponsered by On-Demand
-        </p>
-        <p className="text-sm md:text-xs text- opacity-50">
-          Developed by <Link className="underline" href="https://xanderbilla.com">Xander Billa</Link>
-        </p>
+    <footer className="w-full bg-white text-gray-800 py-6 rounded-t-xl ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+        {/* Branding / Logo */}
+        <div className="flex items-center mb-4 md:mb-0">
+          <ProjectLogo onlyProjectLogo />
+        </div>
+
+        {/* Footer Text */}
+        <div className="text-center md:text-left">
+          <h3 className="text-xl md:text-2xl font-semibold mb-2">Web-A-Thon</h3>
+          <p className="text-sm md:text-base mb-1">&copy; 2024, Sponsored by On-Demand</p>
+          <p className="text-sm md:text-base opacity-75">
+            Developed by <Link className="underline text-gray-700" href="/">UNDEFINED-TEAM</Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }
