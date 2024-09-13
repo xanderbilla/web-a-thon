@@ -10,7 +10,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full h-20 flex items-center justify-between px-4">
+    <header className=" top-0 left-0 w-full h-20 flex items-center justify-between px-4 bg-[#FFFF] shadow-sm z-50 rounded-lg">
       <ProjectLogo onlyProjectLogo />
       <nav className="flex items-center gap-4">
         {nav.map((item, index) => (

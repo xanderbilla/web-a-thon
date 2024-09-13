@@ -10,7 +10,7 @@ export default function Home() {
         <span className="text-xl font-semibold">Everyday is not Sunday so work hard baby!!!</span>
       </div>
 
-      <div className="p-4 grid grid-rows-6 gap-2">
+      <div className="p-4 grid grid-rows-6 gap-8">
         <BlogCard />
         <BlogCard />
         <BlogCard />
