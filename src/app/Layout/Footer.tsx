@@ -15,10 +15,10 @@ export default function Footer({}: Props) {
 
         {/* Footer Text */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2">Web-A-Thon</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-2 text-center">Web-A-Thon</h3>
           <p className="text-sm md:text-base mb-1">&copy; 2024, Sponsored by On-Demand</p>
           <p className="text-sm md:text-base opacity-75">
-            Developed by <Link className="underline text-gray-700" href="/">UNDEFINED-TEAM</Link>
+            Developed by <Link className="underline text-gray-700 text-center" href="/">UNDEFINED-TEAM</Link>
           </p>
         </div>
       </div>
