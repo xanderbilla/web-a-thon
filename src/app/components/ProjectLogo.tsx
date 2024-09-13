@@ -10,7 +10,7 @@ export default function ProjectLogo({ onlyProjectLogo }: Props) {
     <div className="flex items-center gap-2">
       {!onlyProjectLogo && (
         <>
-          <Image src="/logo1.jpeg" alt="AWS Logo" width={40} height={40} />
+          <Image src="/logo.jpeg" alt="AWS Logo" width={40} height={40} />
           <Image
             src="/icons/v_bar.png"
             alt="Vertical bar"
@@ -20,7 +20,7 @@ export default function ProjectLogo({ onlyProjectLogo }: Props) {
         </>
       )}
       <Image
-        src="/logo1.jpeg"
+        src="/logo.jpeg"
         alt="AWS Amplify Logo"
         width={160}
         height={40}

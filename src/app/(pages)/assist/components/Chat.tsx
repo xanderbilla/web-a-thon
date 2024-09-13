@@ -34,7 +34,7 @@ export default function Chat() {
   };
   return (
     <main className="flex flex-col items-center justify-center gap-8">
-      <Card className="w-[440px] ">
+      <Card className="w-full border-none shadow-none">
         <CardHeader>
           <CardTitle> Chat AI </CardTitle>
           <CardDescription>

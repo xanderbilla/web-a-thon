@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/Layout/Footer";
 import Navbar from "@/app/Layout/Navbar";
+import Image from "next/image";
+import Bots from "./Layout/Bots";
 
 const inter = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans min-h-screen py-8 px-12 md:px-24 ${inter.className}`}
+        className={`relative font-sans min-h-screen py-8 px-12 md:px-24 ${inter.className}`}
       >
         <Navbar />
         <div className="min-h-[calc(100vh-14rem)]">{children}</div>
