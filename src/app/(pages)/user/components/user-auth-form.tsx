@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { LoadingSpinner } from "../../../../Icons/LoadingSpinner"
-import { GitHubIcon } from "@/Icons/GitHubIcon"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { LoadingSpinner } from "../../../../Icons/LoadingSpinner";
+import { GitHubIcon } from "@/Icons/GitHubIcon";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   async function onSubmit(event: React.SyntheticEvent) {
-    event.preventDefault()
-    setIsLoading(true)
+    event.preventDefault();
+    setIsLoading(true);
 
     setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
+      setIsLoading(false);
+    }, 3000);
   }
 
   return (
@@ -41,32 +41,34 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               disabled={isLoading}
             />
           </div>
+          <div className="grid gap-1">
+            <Label className="sr-only" htmlFor="password">
+              Password
+            </Label>
+            <Input
+              id="password"
+              placeholder="Password"
+              type="password"
+              autoCapitalize="none"
+              autoComplete="password"
+              autoCorrect="off"
+              disabled={isLoading}
+            />
+          </div>
           <Button disabled={isLoading}>
             {isLoading && (
               <LoadingSpinner className="mr-2 h-4 w-4 animate-spin" />
             )}
             Sign In with Email
           </Button>
+          <Button disabled={isLoading} variant="outline">
+            {isLoading && (
+              <LoadingSpinner className="mr-2 h-4 w-4 animate-spin" />
+            )}
+            Login
+          </Button>
         </div>
       </form>
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
-          </span>
-        </div>
-      </div>
-      <Button variant="outline" type="button" disabled={isLoading}>
-        {isLoading ? (
-          <LoadingSpinner className="mr-2 h-4 w-4 animate-spin" />
-        ) : (
-          <GitHubIcon className="mr-2 h-4 w-4" />
-        )}{" "}
-        GitHub
-      </Button>
     </div>
-  )
+  );
 }

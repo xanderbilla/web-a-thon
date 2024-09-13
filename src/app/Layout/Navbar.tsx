@@ -14,7 +14,7 @@ export default function Navbar() {
       <ProjectLogo onlyProjectLogo />
       <nav className="flex items-center gap-4">
         {nav.map((item, index) => (
-          <Link key={index} href={item.path} className="text-lg font-medium">
+          <Link key={index} href={item.path} className="text-xl font-medium">
             {item.name}
           </Link>
         ))}
