@@ -18,7 +18,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [error, setError] = React.useState<string | null>(null);
-
+  const [success, setSuccess] = React.useState<string | null>(null);
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     setIsLoading(true);
@@ -28,12 +28,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       email: email,
       password: password,
     };
-    
+
     try {
       const response = await axios.post(
-      "http://localhost:5000/api/auth/signup",
-      data
+        "http://localhost:5000/api/auth/signup",
+        data
       );
+      setSuccess("User created successfully");
     } catch (error) {
       setError("Invalid credentials");
       setTimeout(() => {
@@ -54,13 +55,17 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       email: email,
       password: password,
     };
-    
+
     try {
       const response = await axios.post(
         "http://localhost:5000/api/auth/login",
         data
       );
       localStorage.setItem("token", response.data.token);
+
+      setSuccess("User logged in successfully");
+      // Redirect to the home
+      window.location.href = "/";
     } catch (error) {
       setError("Invalid credentials");
       setTimeout(() => {
@@ -128,12 +133,19 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             )}
             Sign Up
           </Button>
-          <Button disabled={isLoading} onClick={handleLogin} variant="outline">Sign In</Button>
-          {
-            error && (
-              <div className="flex items-center justify-center bg-slate-200/20 text-md text-red-600 w-full h-12">{error}</div>
-            )
-          }
+          <Button disabled={isLoading} onClick={handleLogin} variant="outline">
+            Sign In
+          </Button>
+          {error && (
+            <div className="flex items-center justify-center bg-slate-200/20 text-md text-red-600 w-full h-12">
+              {error}
+            </div>
+          )}
+          {success && (
+            <div className="flex items-center justify-center bg-slate-200/20 text-md text-red-600 w-full h-12">
+              {success}
+            </div>
+          )}
         </div>
       </form>
     </div>

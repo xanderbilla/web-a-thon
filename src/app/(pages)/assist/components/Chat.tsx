@@ -140,7 +140,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 export default function ScanQR({}: Props) {
   const [input, setInput] = useState("");
   const [message, setMessage] = useState(
-    "Scan the QR code to get the information about the food you are about to eat."
+    "What do you want to eat today???"
   );
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -166,7 +166,7 @@ export default function ScanQR({}: Props) {
       <div className="flex flex-col-reverse gap-4">
         <form className="w-full flex gap-2" onSubmit={handleSubmit}>
           <Input
-            placeholder="Enter the barcode..."
+            placeholder="Write your text..."
             value={input}
             onChange={handleInputChange}
           />
