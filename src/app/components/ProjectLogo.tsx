@@ -9,24 +9,26 @@ interface Props {
 export default function ProjectLogo({ onlyProjectLogo }: Props) {
   return (
     <div className="flex items-center gap-2">
-      {!onlyProjectLogo && (
-        <>
-          <Image src="/logo.jpeg" alt="AWS Logo" width={40} height={40} />
-          <Image
-            src="/icons/v_bar.png"
-            alt="Vertical bar"
-            width={10}
-            height={40}
-          />
-        </>
-      )}
-      <Image
-        src="/logo.jpeg"
-        alt="AWS Amplify Logo"
-        width={160}
-        height={40}
-        className="object-contain"
-      />
+      <Link href="/">
+        {!onlyProjectLogo && (
+          <>
+            <Image src="/logo.jpeg" alt="AWS Logo" width={40} height={40} />
+            <Image
+              src="/icons/v_bar.png"
+              alt="Vertical bar"
+              width={10}
+              height={40}
+            />
+          </>
+        )}
+        <Image
+          src="/logo.jpeg"
+          alt="AWS Amplify Logo"
+          width={160}
+          height={40}
+          className="object-contain"
+        />
+      </Link>
     </div>
   );
 }
