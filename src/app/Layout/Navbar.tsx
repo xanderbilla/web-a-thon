@@ -1,14 +1,17 @@
+"use client"
+
 import ProjectLogo from "@/app/components/ProjectLogo";
 import Link from "next/link";
 import React from "react";
-
 export default function Navbar() {
+  
   const nav = [
     { name: "Home", path: "/" },
     { name: "Community", path: "/blog" },
     { name: "Assist", path: "/assist" },
     { name: "Dashboard", path: "/dashboard" },
   ];
+
 
   return (
     <header className="top-0 left-0 w-full h-20 flex items-center justify-between px-4 bg-[#FFFF] shadow-sm z-50 rounded-sm">

@@ -19,6 +19,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [password, setPassword] = React.useState<string>("");
   const [error, setError] = React.useState<string | null>(null);
   const [success, setSuccess] = React.useState<string | null>(null);
+
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     setIsLoading(true);
@@ -35,16 +36,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         data
       );
       setSuccess("User created successfully");
+
+      setEmail("")
+      setPassword("")
+      setPassword("")
+
+      setTimeout(() => {
+        setSuccess(null);
+      }, 3000);
     } catch (error) {
       setError("Invalid credentials");
       setTimeout(() => {
         setError(null);
       }, 5000);
-    }
-
-    setTimeout(() => {
+    } finally {
       setIsLoading(false);
-    }, 3000);
+    }
   }
 
   async function handleLogin(event: React.SyntheticEvent) {
@@ -64,6 +71,12 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       localStorage.setItem("token", response.data.token);
 
       setSuccess("User logged in successfully");
+
+      setEmail("");
+      setPassword("");
+      setTimeout(() => {
+        setSuccess(null);
+      }, 3000);
       // Redirect to the home
       window.location.href = "/";
     } catch (error) {
@@ -71,11 +84,9 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       setTimeout(() => {
         setError(null);
       }, 5000);
-    }
-
-    setTimeout(() => {
+    } finally {
       setIsLoading(false);
-    }, 3000);
+    }
   }
 
   return (

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"; // Add this import statement
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import axios from "axios";
 import { useParams } from "next/navigation";
-
+import { Arrow } from "@/Icons/Arrow";  
 type Props = {}
 
 export default function BlogPage(Props: Props) {
@@ -18,7 +18,7 @@ export default function BlogPage(Props: Props) {
     const fetchData = async () => {
     try {
       const response = await axios.get(`http://localhost:5000/api/posts/${path_id.id}`);
-      setData(response.data[0]); 
+      setData(response.data); 
       console.log(response.data);
       
     } catch (error) {
@@ -33,20 +33,20 @@ export default function BlogPage(Props: Props) {
   <div className="w-full min-h-72 flex flex-col gap-4 mb-8">
     <div className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-50 p-2 rounded-lg">
       <h1 className="text-5xl font-extrabold">
-      {data.title}
+      {data?.title}
       </h1>
       <div className="flex items-center justify-start gap-2 text-lg">
       <Avatar className="h-8 w-8">
         <AvatarImage src="https://github.com/shadcn.png" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <span className="font-medium">{data.author}</span>
+      <span className="font-medium">{data?.author}</span>
       {" | "}
       <span className="font-base">05 September, 2021</span>
       </div>
     </div>
     <article className="max-w-none prose md:prose-lg lg:prose-xl">
-    {data.content}
+    <div dangerouslySetInnerHTML={{ __html: data?.content }}></div>
     </article>
     </div>
   )
