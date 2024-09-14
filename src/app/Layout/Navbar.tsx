@@ -6,6 +6,7 @@ export default function Navbar() {
   const nav = [
     { name: "Home", path: "/" },
     { name: "Community", path: "/blog" },
+    { name: "Assist", path: "/assist" },
     { name: "Dashboard", path: "/dashboard" },
   ];
 

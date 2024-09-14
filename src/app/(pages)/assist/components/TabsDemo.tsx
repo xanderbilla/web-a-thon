@@ -21,9 +21,10 @@ export function TabsDemo() {
   return (
  <div className="w-full flex items-center justify-center">
      <Tabs defaultValue="account" className="w-3/4">
-      <TabsList className="grid w-full grid-cols-2">
+      <TabsList className="grid w-full grid-cols-3">
         <TabsTrigger value="account">Chat Assist</TabsTrigger>
         <TabsTrigger value="password">Know Your Food</TabsTrigger>
+        <TabsTrigger value="monitor">Health Monitor</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>
@@ -41,6 +42,11 @@ export function TabsDemo() {
           <CardContent className="space-y-2">
            <ScanQR/>
           </CardContent>
+        </Card>
+      </TabsContent>
+      <TabsContent value="monitor">
+        <Card>
+         <Chat/>
         </Card>
       </TabsContent>
     </Tabs>

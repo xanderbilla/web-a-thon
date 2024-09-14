@@ -28,6 +28,7 @@ export default function ContentForm({}: Props) {
   const [title, SetTitle] = React.useState("");
   const [slug, SetSlug] = React.useState("");
   const [content, setContent] = React.useState("");
+  const [message, setMessage] = React.useState("");
 
   const handleClick = async () => {
 
@@ -50,8 +51,15 @@ export default function ContentForm({}: Props) {
         data,
         config
       );
+      setMessage("Post created successfully.");
+
+      // Reset input values
+      SetTitle("");
+      SetSlug("");
+      setContent("");
     } catch (error) {
       console.log(error);
+      setMessage("An error occurred. Please try again.");
     }
 
   };
@@ -83,6 +91,13 @@ export default function ContentForm({}: Props) {
         <Editor initialValue={defaultValue} onChange={setContent}/>
         <Button onClick={handleClick} className="text-lg h-12">Create</Button>
       </div>
+      {
+        message && (
+          <div className="w-full mt-4 prose my-4 px-2">
+            <p>{message}</p>
+          </div>
+        )
+      }
     </div>
   );
 }

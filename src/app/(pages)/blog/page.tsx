@@ -1,24 +1,15 @@
-import BlogCard from "./components/BlogCard";
-import { Button } from "@/components/ui/button";
+"use client"
+import React from 'react'
+import GridCard from './components/GridCard'
+import { useParams } from 'next/navigation';
 
-export default function Home() {
+type Props = {}
+
+export default function Page({}: Props) {
   return (
-    <main className="">
-      <div className="flex items-center justify-between">
-      <div className="p-2 px-4">
-        <h1 className="my-2 text-6xl font-extrabold">Blog</h1>
-        <span className="text-xl opacity-70 font-semibold">Everyday is not Sunday so work hard baby!!!</span>
-      </div>
-      <Button className="m-4">Create a Blog</Button>
-      </div>
-
-      <div className="p-4 grid grid-rows-6 gap-8">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-      </div>
-    </main>
-  );
+    
+    <div className="">
+      <GridCard/>
+    </div>
+  )
 }
