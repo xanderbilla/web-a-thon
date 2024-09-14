@@ -7,8 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
   Tabs,
   TabsContent,
@@ -18,13 +16,14 @@ import {
 import Chat from "./Chat"
 import ScanQR from "./ScanQR"
 
+
 export function TabsDemo() {
   return (
- <div className="">
-     <Tabs defaultValue="account" className="w-[400px]">
+ <div className="w-full flex items-center justify-center">
+     <Tabs defaultValue="account" className="w-3/4">
       <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="account">Account</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+        <TabsTrigger value="account">Chat Assist</TabsTrigger>
+        <TabsTrigger value="password">Know Your Food</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
         <Card>
@@ -34,17 +33,14 @@ export function TabsDemo() {
       <TabsContent value="password">
         <Card>
           <CardHeader>
-            <CardTitle>Password</CardTitle>
+            <CardTitle>Know your food </CardTitle>
             <CardDescription>
-              Change your password here. After saving, you&#39;ll be logged out.
+              Get a brief description of the food you are about to eat of package using barcode.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
            <ScanQR/>
           </CardContent>
-          <CardFooter>
-            <Button>Save password</Button>
-          </CardFooter>
         </Card>
       </TabsContent>
     </Tabs>

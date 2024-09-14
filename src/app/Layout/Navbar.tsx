@@ -5,8 +5,8 @@ import React from "react";
 export default function Navbar() {
   const nav = [
     { name: "Home", path: "/" },
-    { name: "Blogs", path: "/blog" },
-    { name: "User", path: "/user" },
+    { name: "Community", path: "/blog" },
+    { name: "Dashboard", path: "/dashboard" },
   ];
 
   return (
@@ -17,7 +17,7 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.path}
-            className="text-xl font-medium transition duration-300 ease-in-out hover:bg-black hover:text-white p-2 rounded-full"
+            className="text-xl px-4 font-medium transition duration-300 ease-in-out hover:bg-black hover:text-white py-1 rounded-full"
           >
             {item.name}
           </Link>

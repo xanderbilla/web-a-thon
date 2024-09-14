@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Editor from "@/components/editor/editor";
+import axios from "axios";
 
 type Props = {};
 
@@ -28,8 +29,31 @@ export default function ContentForm({}: Props) {
   const [slug, SetSlug] = React.useState("");
   const [content, setContent] = React.useState("");
 
-  const handleClick = () => {
-    console.log({ title, slug, content });
+  const handleClick = async () => {
+
+    const data = {
+      title: title,
+      content: content,
+    };
+    console.log(data);
+    
+    try {
+      const token = localStorage.getItem("token");
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+
+      const response = await axios.post(
+        "http://localhost:5000/api/posts/",
+        data,
+        config
+      );
+    } catch (error) {
+      console.log(error);
+    }
+
   };
 
   useEffect(() => {
