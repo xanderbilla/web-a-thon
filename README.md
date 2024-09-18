@@ -5,6 +5,9 @@ This is a project based on Health and Fitness where we track and generate user b
 
 We have used On Dmand platform to run our backend application using agents and modified LLM. 
 
+
+### Live on - [https://web-a-thon-ten.vercel.app](https://web-a-thon-ten.vercel.app) (make sure to run the [backend](https://github.com/rajvardhan05/webAThon-backend) locally)
+
 ## Getting Started
 
 To clone and install Next.js, you can follow these steps:
